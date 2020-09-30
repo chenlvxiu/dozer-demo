@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dozer.sourceforge.net"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <configuration>
+        <date-format>yyyy-MM-dd</date-format>
+        <custom-converters>
+            <converter type="com.yiyouxiao.convert.SimpleConvert">
+                <class-a>com.yiyouxiao.modle.A</class-a>
+                <class-b>com.yiyouxiao.modle.E</class-b>
+            </converter>
+        </custom-converters>
+    </configuration>
+
+    <mapping>
+        <!--对应的实体和要转换成的VO-->
+
+        <class-a>com.yiyouxiao.modle.A</class-a>
+        <class-b>com.yiyouxiao.modle.B</class-b>
+        <!--对应要转换的属性名.<a>和<class-a>对应，其它同理-->
+        <field >
+            <a date-format="yyyy-MM0-dd HH:mm:ss">date</a>
+            <b>date</b>
+        </field>
+        <field>
+            <a>aName</a>
+            <b>bName</b>
+        </field>
+        <field>
+            <a>desc</a>
+            <b set-method="copyDesc">desc</b>
+        </field>
+        <field>
+            <a>innerProp</a>
+            <b>c.innerProp</b>
+        </field>
+    </mapping>
+    <mapping>
+        <class-a>com.yiyouxiao.modle.A</class-a>
+        <class-b>com.yiyouxiao.modle.D</class-b>
+        <field>
+            <a>aName</a>
+            <b>dName</b>
+        </field>
+    </mapping>
+    
+</mappings>
