@@ -2,10 +2,6 @@ package com.yiyouxiao.modle;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.dozer.Mapping;
-
-import java.util.Date;
 
 /**
  * @author clx
@@ -25,9 +21,9 @@ public class A {
 //    @Mapping("bName")
     private String aName;
 
-    private String innerProp;
+    private String date;
 
-    private Date date;
+    private C c;
 
 
 }

@@ -6,6 +6,11 @@
     <configuration>
         <date-format>yyyy-MM-dd</date-format>
         <custom-converters>
+           <!-- <converter type="com.yiyouxiao.convert.DozerStringToDateConverter" >
+                <class-a>java.lang.String</class-a>
+                <class-b>java.util.Date</class-b>
+            </converter>-->
+
             <converter type="com.yiyouxiao.convert.SimpleConvert">
                 <class-a>com.yiyouxiao.modle.A</class-a>
                 <class-b>com.yiyouxiao.modle.E</class-b>
@@ -13,12 +18,12 @@
         </custom-converters>
     </configuration>
 
-    <mapping>
-        <!--对应的实体和要转换成的VO-->
+    <!--<mapping>
+        &lt;!&ndash;对应的实体和要转换成的VO&ndash;&gt;
 
         <class-a>com.yiyouxiao.modle.A</class-a>
         <class-b>com.yiyouxiao.modle.B</class-b>
-        <!--对应要转换的属性名.<a>和<class-a>对应，其它同理-->
+        &lt;!&ndash;对应要转换的属性名.<a>和<class-a>对应，其它同理&ndash;&gt;
         <field >
             <a date-format="yyyy-MM0-dd HH:mm:ss">date</a>
             <b>date</b>
@@ -32,8 +37,8 @@
             <b set-method="copyDesc">desc</b>
         </field>
         <field>
-            <a>innerProp</a>
-            <b>c.innerProp</b>
+            <a>c.innerProp</a>
+            <b>innerProp</b>
         </field>
     </mapping>
     <mapping>
@@ -44,5 +49,5 @@
             <b>dName</b>
         </field>
     </mapping>
-    
+    -->
 </mappings>

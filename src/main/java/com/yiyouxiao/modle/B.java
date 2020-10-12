@@ -3,6 +3,7 @@ package com.yiyouxiao.modle;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,9 +22,10 @@ public class B {
 
     private String bName;
 
-    private String date;
+    private String innerProp;
 
-    private C c;
+    private Date date;
+
 
 
     public void copyDesc(String desc){
